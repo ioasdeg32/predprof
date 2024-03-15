@@ -23,8 +23,6 @@ def is_valid_password(password: str) -> bool:
     flags = [False, False, False]
 
     for i in password:
-        if flags[0] and flags[1] and flags[2]:
-            return True
         if i in string.ascii_lowercase:
             flags[0] = True
         elif i in string.ascii_uppercase:
@@ -32,7 +30,7 @@ def is_valid_password(password: str) -> bool:
         else:
             flags[2] = True
 
-    return False
+    return all(flags)
 
 
 def main() -> None:
