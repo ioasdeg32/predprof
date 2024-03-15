@@ -18,8 +18,7 @@ def generate_hash(string: str) -> int:
 
     hash_ = 0
     for i in range(len(string)):
-        if string[i].isalpha():
-            hash_ += (char_hash[string[i]] * p ** i) % m
+        hash_ += (char_hash[string[i]] * p ** i) % m
 
     return hash_
 
