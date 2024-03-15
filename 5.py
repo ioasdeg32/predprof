@@ -25,6 +25,11 @@ def generate_hash(string: str) -> int:
 
 
 def main() -> None:
+    """
+    основная функция программы
+    :return: None
+    """
+
     with open("students.csv") as input_file:
         reader = list(csv.reader(input_file, delimiter=","))
 
